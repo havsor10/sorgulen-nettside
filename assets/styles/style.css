@@ -4,6 +4,8 @@ body {
   font-family: 'Arial', sans-serif;
   background-color: #0b0c10;
   color: #ffffff;
+  background: url('../../assets/bakgrunn.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 /* Header og navigasjon */
@@ -13,7 +15,6 @@ header {
   align-items: center;
   background-color: #1f2833;
   padding: 1.5rem 2rem;
-  flex-direction: row;
   flex-wrap: wrap;
 }
 
@@ -42,7 +43,7 @@ header {
 
 /* Hero seksjon */
 .hero-section {
-  background-image: url('../bakgrunn.jpg');
+  background-image: url('../../assets/bakgrunn.jpg');
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -60,7 +61,6 @@ header {
   max-width: 90%;
 }
 
-/* Hero-knapper */
 .hero-buttons {
   margin-top: 2rem;
   display: flex;
@@ -78,6 +78,7 @@ header {
   border-radius: 5px;
   font-weight: bold;
   font-size: 1.2rem;
+  text-align: center;
 }
 
 .button:hover {
@@ -97,6 +98,14 @@ header {
 @keyframes bounce {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(10px); }
+}
+
+/* Hero extension */
+.hero-extension {
+  height: 80px;
+  background-image: url('../../assets/bakgrunn.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 /* Seksjon med bilde */
@@ -121,15 +130,7 @@ header {
   max-width: 40%;
 }
 
-/* Hero extension */
-.hero-extension {
-  height: 80px;
-  background-image: url('../assets/bakgrunn.jpg');
-  background-size: cover;
-  background-position: center;
-}
-
-/* NY tjenesteseksjon */
+/* Tjenesteseksjon */
 .new-services {
   display: flex;
   flex-direction: column;
@@ -137,7 +138,7 @@ header {
   gap: 2rem;
   padding: 4rem 1rem;
   background-color: #0b0c10;
-  background-image: url('../bakgrunn.jpg');
+  background-image: url('../../assets/bakgrunn.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -169,12 +170,10 @@ header {
   color: #333333;
 }
 
-/* Knappestil */
 .card-buttons {
   display: flex;
   gap: 1rem;
   margin-top: 1.5rem;
-  flex-wrap: wrap;
 }
 
 .info-btn,
@@ -212,90 +211,8 @@ header {
   color: #ffffff;
 }
 
-/* Kontakt-skjema og bokser */
-.content-box,
-.innhold-boks {
-  background: rgba(0, 0, 0, 0.7);
-  margin: 2rem auto;
-  padding: 2rem;
-  border-radius: 15px;
-  max-width: 700px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
-  color: #ffffff;
-}
-
-.content-box h1,
-.content-box h2 {
-  margin-bottom: 1rem;
-  color: #ffffff;
-}
-
-.content-box p {
-  line-height: 1.6;
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
-}
-
-.button-row {
-  display: flex;
-  gap: 1rem;
-  margin-top: 2rem;
-  flex-wrap: wrap;
-}
-
-.main-btn {
-  background-color: #45a29e;
-  color: #fff;
-  padding: 0.9rem 1.4rem;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.3s;
-  font-size: 1rem;
-}
-
-.main-btn:hover {
-  background-color: #66fcf1;
-  color: #0b0c10;
-}
-
-.main-btn.secondary {
-  background-color: #1f2833;
-  border: 2px solid #66fcf1;
-  color: #66fcf1;
-}
-
-.main-btn.secondary:hover {
-  background-color: #66fcf1;
-  color: #0b0c10;
-}
-
-.kontakt-skjema {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 2rem;
-}
-
-.kontakt-skjema input,
-.kontakt-skjema textarea {
-  padding: 0.9rem;
-  border-radius: 5px;
-  border: none;
-  font-size: 1rem;
-}
-
-.kontakt-skjema textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-/* Logg inn-knapp */
+/* Logg inn knapp */
 .logginn-knapp {
-  position: absolute;
-  top: 30px;
-  right: 40px;
   background: transparent;
   color: white;
   font-weight: bold;
@@ -322,123 +239,62 @@ header {
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-/* Chat-popup */
-.chat-popup,
-.chat-vindu {
+.chat-popup {
+  display: none;
   position: fixed;
   bottom: 90px;
   right: 20px;
-  border-radius: 10px;
-  z-index: 9999;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-}
-
-.chat-popup {
-  display: none;
   width: 280px;
   background: white;
   color: #000;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   padding: 20px;
+  z-index: 999;
 }
 
-.chat-vindu {
-  background: #1d1f23;
-  border: 2px solid #0074cc;
-  padding: 20px;
-  width: 320px;
-  color: #fff;
-  font-family: sans-serif;
-}
-
-.chat-popup .chat-header,
-.chat-vindu-header {
+.chat-popup .chat-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
 }
 
-.chat-popup .chat-header h3,
-.chat-vindu-header h3 {
+.chat-popup .chat-header h3 {
   margin: 0;
-  font-size: 18px;
 }
 
-.chat-vindu-header button {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-}
-
-.chat-velkomst {
-  font-size: 15px;
-  margin-bottom: 20px;
-}
-
-.chat-valgknapper button {
+.chat-popup .chat-valg {
   display: block;
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 10px;
-  background: #0074cc;
-  border: none;
-  color: #fff;
-  font-weight: bold;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 14px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
 }
 
-.chat-valgknapper button:hover {
-  background-color: #005999;
-}
-
-/* RESPONSIVITET */
-@media screen and (max-width: 768px) {
+/* Responsivitet */
+@media (max-width: 768px) {
   .hero-box h1 {
-    font-size: 1.8rem;
-  }
-
-  .button {
-    font-size: 1rem;
-    padding: 0.8rem 1.5rem;
-  }
-
-  .service-image-text {
-    position: static;
-    max-width: 100%;
-    padding: 1rem;
-    text-align: center;
+    font-size: 2rem;
   }
 
   .main-nav {
     flex-direction: column;
-    gap: 1rem;
-    align-items: flex-end;
+    align-items: flex-start;
   }
 
-  header {
-    flex-direction: column;
-    align-items: flex-start;
+  .service-image-text {
+    position: relative;
+    top: auto;
+    left: auto;
+    max-width: 100%;
     padding: 1rem;
   }
-
-  .logginn-knapp {
-    position: static;
-    margin-top: 1rem;
-    align-self: flex-end;
-  }
-
-  .card-buttons {
-    flex-direction: column;
-  }
-
-  .scroll-indicator {
-    font-size: 1.5rem;
-  }
 }
+
 
 
 
