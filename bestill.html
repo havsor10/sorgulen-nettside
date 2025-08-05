@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bestill Tjeneste</title>
+  <link rel="stylesheet" href="../styles/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Bestill Tjeneste</h1>
+  </header>
+
+  <main>
+    <form id="bestillingsForm">
+      <label for="tjeneste">Tjeneste:</label>
+      <select id="tjeneste" name="tjeneste" required>
+        <option value="">Velg tjeneste</option>
+        <option value="Brøyting">Brøyting</option>
+        <option value="Trefelling">Trefelling</option>
+        <option value="Plenklipping">Plenklipping</option>
+        <option value="Diverse">Diverse</option>
+      </select>
+
+      <label for="navn">Navn:</label>
+      <input type="text" id="navn" name="navn" required />
+
+      <label for="dato">Ønsket dato:</label>
+      <input type="date" id="dato" name="dato" required />
+
+      <label for="tidspunkt">Ønsket tidspunkt:</label>
+      <input type="time" id="tidspunkt" name="tidspunkt" required />
+
+      <label for="tilleggsinfo">Tilleggsinformasjon:</label>
+      <textarea id="tilleggsinfo" name="tilleggsinfo" rows="4"></textarea>
+
+      <button type="submit">Send bestilling</button>
+    </form>
+
+    <div id="bekreftelse" style="display:none; margin-top: 20px;">
+      <p>Takk! Bestillingen er sendt og vil bli behandlet så snart som mulig.</p>
+    </div>
+  </main>
+
+  <script src="../scripts/bestilling.js"></script>
+</body>
+</html>

@@ -1,0 +1,449 @@
+/* Grunnstil */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #0b0c10;
+  color: #ffffff;
+}
+
+/* Header og navigasjon */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2833;
+  padding: 1.5rem 2rem;
+  flex-direction: row;
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #66fcf1;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.main-nav a {
+  color: #c5c6c7;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.main-nav a:hover {
+  color: #66fcf1;
+}
+
+/* Hero seksjon */
+.hero-section {
+  background-image: url('../bakgrunn.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-box h1 {
+  font-size: 2.8rem;
+  color: #ffffff;
+  max-width: 90%;
+}
+
+/* Hero-knapper */
+.hero-buttons {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: auto;
+  max-width: none;
+}
+
+.button {
+  padding: 1rem 2rem;
+  background-color: #45a29e;
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #66fcf1;
+  color: #0b0c10;
+}
+
+/* Scroll-indikator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 20px;
+  font-size: 2rem;
+  animation: bounce 2s infinite;
+  color: #ffffff;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(10px); }
+}
+
+/* Seksjon med bilde */
+.service-image-section {
+  position: relative;
+  text-align: left;
+  padding: 2rem 0;
+  background-color: #1f2833;
+}
+
+.service-image-section img {
+  width: 100%;
+  height: auto;
+  filter: brightness(0.8);
+}
+
+.service-image-text {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  color: #ffffff;
+  max-width: 40%;
+}
+
+/* Hero extension */
+.hero-extension {
+  height: 80px;
+  background-image: url('../assets/bakgrunn.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* NY tjenesteseksjon */
+.new-services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem 1rem;
+  background-color: #0b0c10;
+  background-image: url('../bakgrunn.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* Tjenestekort */
+.service-card {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  margin: 2rem auto;
+  max-width: 500px;
+  width: 90%;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.service-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #0b0c10;
+}
+
+.service-card p {
+  font-size: 1.1rem;
+  margin: 0.7rem 0;
+  color: #333333;
+}
+
+/* Knappestil */
+.card-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.info-btn,
+.bestill-btn {
+  flex: 1;
+  text-align: center;
+  padding: 0.9rem 1.2rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+  border: 2px solid;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.info-btn {
+  color: #00cc66;
+  border-color: #00cc66;
+  background-color: #eafff2;
+}
+
+.info-btn:hover {
+  background-color: #00cc66;
+  color: #ffffff;
+}
+
+.bestill-btn {
+  color: #0066cc;
+  border-color: #0066cc;
+  background-color: #eaf4ff;
+}
+
+.bestill-btn:hover {
+  background-color: #0066cc;
+  color: #ffffff;
+}
+.content-box {
+  background: rgba(0, 0, 0, 0.7);
+  margin: 2rem auto;
+  padding: 2rem;
+  border-radius: 15px;
+  max-width: 700px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  color: #ffffff;
+}
+
+.content-box h1,
+.content-box h2 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.content-box p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.button-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.main-btn {
+  background-color: #45a29e;
+  color: #fff;
+  padding: 0.9rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  font-size: 1rem;
+  display: inline-block;
+  text-align: center;
+}
+
+.main-btn:hover {
+  background-color: #66fcf1;
+  color: #0b0c10;
+}
+
+.main-btn.secondary {
+  background-color: #1f2833;
+  border: 2px solid #66fcf1;
+  color: #66fcf1;
+}
+
+.main-btn.secondary:hover {
+  background-color: #66fcf1;
+  color: #0b0c10;
+}
+
+.kontakt-skjema {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.kontakt-skjema input,
+.kontakt-skjema textarea {
+  padding: 0.9rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+}
+
+.kontakt-skjema textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+body {
+  background: url('../bakgrunn.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-color: #0b0c10; /* fallback-farge */
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+}
+.innhold-boks {
+  background-color: rgba(0, 0, 0, 0.75);
+  margin: 100px auto;
+  padding: 40px;
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: center;
+  color: #fff;
+}
+
+.tilbake-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background-color: #00d4ff;
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.tilbake-btn:hover {
+  background-color: #00b0d0;
+}
+.logginn-knapp {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  background: transparent;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+.chat-knapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+}
+
+.chat-knapp img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 280px;
+  background: white;
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  padding: 20px;
+  z-index: 999;
+}
+
+.chat-popup .chat-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.chat-popup .chat-header h3 {
+  margin: 0;
+}
+
+.chat-popup .chat-valg {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #003366;
+  color: white;
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.chat-vindu {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  background: #1d1f23;
+  border: 2px solid #0074cc;
+  border-radius: 10px;
+  padding: 20px;
+  width: 320px;
+  z-index: 9999;
+  box-shadow: 0 0 15px rgba(0, 116, 204, 0.6);
+  color: #fff;
+  font-family: sans-serif;
+}
+
+.chat-vindu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.chat-vindu-header h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.chat-vindu-header button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.chat-velkomst {
+  font-size: 15px;
+  margin-bottom: 20px;
+}
+
+.chat-valgknapper button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  background: #0074cc;
+  border: none;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chat-valgknapper button:hover {
+  background-color: #005999;
+}
+
+
+

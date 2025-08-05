@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Bestill Brøyting</title>
+  <link rel="stylesheet" href="../../assets/styles/style.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-image: url('../../assets/bakgrunn.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+    }
+
+    .form-container {
+      background-color: rgba(0, 0, 0, 0.75);
+      max-width: 500px;
+      margin: 5rem auto;
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    input, textarea, button {
+      width: 100%;
+      margin-top: 1rem;
+      padding: 0.8rem;
+      border-radius: 5px;
+      border: none;
+    }
+
+    button {
+      background-color: #00c6a2;
+      color: white;
+      cursor: pointer;
+    }
+
+    #melding {
+      margin-top: 1rem;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h1>Bestill brøyting</h1>
+    <form id="broeytingSkjema">
+      <input type="text" name="navn" placeholder="Navn" required />
+      <input type="text" name="adresse" placeholder="Adresse" required />
+      <input type="tel" name="telefon" placeholder="Telefonnummer" required />
+      <input type="email" name="epost" placeholder="E-post" required />
+      <input type="datetime-local" name="dato" required />
+      <textarea name="tilleggsinfo" placeholder="Tilleggsinformasjon"></textarea>
+      <button type="submit">Send bestilling</button>
+    </form>
+    <div id="melding"></div>
+  </div>
+
+  <script>
+    const skjema = document.getElementById("broeytingSkjema");
+    const melding = document.getElementById("melding");
+
+    skjema.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const data = {
+        tjeneste: "Brøyting",
+        navn: skjema.navn.value,
+        adresse: skjema.adresse.value,
+        telefon: skjema.telefon.value,
+        epost: skjema.epost.value,
+        dato: skjema.dato.value,
+        tilleggsinfo: skjema.tilleggsinfo.value,
+        status: "venter på godkjenning",
+        tidspunkt: new Date().toISOString()
+      };
+
+      try {
+        const res = await fetch("https://sorgulen-admin-backend.onrender.com/bestill", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (res.ok) {
+          melding.textContent = "Bestillingen er sendt!";
+          skjema.reset();
+        } else {
+          melding.textContent = "Noe gikk galt. Prøv igjen.";
+        }
+      } catch (err) {
+        melding.textContent = "Serverfeil. Prøv igjen senere.";
+      }
+    });
+  </script>
+</body>
+</html>

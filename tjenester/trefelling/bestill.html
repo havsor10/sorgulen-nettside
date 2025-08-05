@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8">
+  <title>Bestill Trefelling</title>
+  <link rel="stylesheet" href="../../assets/styles/style.css">
+  <style>
+    body {
+      background-color: #0b0c10;
+      background-image: url('../../assets/bakgrunn.jpg');
+      background-size: cover;
+      background-position: center;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      color: white;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .form-container {
+      max-width: 500px;
+      margin: 0 auto;
+      background-color: rgba(0,0,0,0.6);
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.7rem;
+      border: none;
+      border-radius: 5px;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .form-buttons {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .form-buttons button,
+    .form-buttons a {
+      padding: 0.7rem 1.2rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      color: white;
+      background-color: #33bba6;
+      transition: 0.3s;
+    }
+
+    .form-buttons button:hover,
+    .form-buttons a:hover {
+      background-color: #28a090;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Bestill trefelling</h1>
+
+  <div class="form-container">
+    <form action="#" method="post">
+      <label for="navn">Navn:</label>
+      <input type="text" id="navn" name="navn" required>
+
+      <label for="adresse">Adresse:</label>
+      <input type="text" id="adresse" name="adresse" required>
+
+      <label for="telefon">Telefon:</label>
+      <input type="tel" id="telefon" name="telefon" required>
+
+      <label for="epost">E-post:</label>
+      <input type="email" id="epost" name="epost" required>
+
+      <label for="tidspunkt">Ønsket dato og klokkeslett:</label>
+      <input type="text" id="tidspunkt" name="tidspunkt">
+
+      <label for="tilleggsinfo">Tilleggsinfo:</label>
+      <textarea id="tilleggsinfo" name="tilleggsinfo" placeholder="F.eks. trær nær bygninger, rydding, spesielle ønsker osv."></textarea>
+
+      <div class="form-buttons">
+        <button type="submit">Send bestilling</button>
+        <a href="../../index.html">← Tilbake</a>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>

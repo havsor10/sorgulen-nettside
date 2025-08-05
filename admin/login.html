@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Innlogging</title>
+  <link rel="stylesheet" href="admin-login.css" />
+  <style>
+    .tilbake-knapp {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 10px 20px;
+      border: 3px solid red;
+      color: blue;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .tilbake-knapp:hover {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <img src="styles/admin/logo_sorgulen.png" alt="Sørgulen logo" class="logo" />
+    <h2>Admin Innlogging</h2>
+
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Brukernavn" required />
+      <input type="password" id="password" placeholder="Passord" required />
+      <button type="submit">Logg inn</button>
+    </form>
+
+    <!-- Tilbake-knapp -->
+    <a href="../index.html" class="tilbake-knapp">Tilbake</a>
+  </div>
+
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const brukernavn = document.getElementById("username").value;
+      const passord = document.getElementById("password").value;
+
+      if (brukernavn === "havsor10" && passord === "Lussi100898") {
+        sessionStorage.setItem("innlogget", "true");
+        window.location.href = "admin-dashboard.html";
+      } else {
+        alert("Feil brukernavn eller passord");
+      }
+    });
+  </script>
+</body>
+</html>

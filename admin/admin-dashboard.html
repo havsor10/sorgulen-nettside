@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adminpanel - Sørgulen Industriservice</title>
+  <link rel="stylesheet" href="styles/admin.css" />
+</head>
+<body>
+  <header>
+    <h1>Adminpanel – Sørgulen Industriservice</h1>
+  </header>
+
+  <div class="navbar">
+    <button class="tab active" data-target="aktive">Aktive</button>
+    <button class="tab" data-target="fullforte">Fullførte</button>
+    <button class="tab" data-target="kansellerte">Kansellerte</button>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="search" placeholder="Søk etter navn, dato, osv..." />
+  </div>
+
+  <main>
+    <section id="aktive" class="tab-content active"></section>
+    <section id="fullforte" class="tab-content"></section>
+    <section id="kansellerte" class="tab-content"></section>
+  </main>
+
+  <script src="scripts/admin-dashboard.js"></script>
+</body>
+</html>
