@@ -108,10 +108,16 @@
 
   <script src="chat/chat-widget.js"></script>
 <script>
-  function toggleMobileMenu() {
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
     const menu = document.getElementById("mobileMenu");
-    menu.classList.toggle("active");
-  }
+
+    if (hamburger && menu) {
+      hamburger.addEventListener("click", () => {
+        menu.classList.toggle("active");
+      });
+    }
+  });
 </script>
 </body>
 </html>
