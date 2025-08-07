@@ -10,18 +10,37 @@
 </head>
 <body>
 
-  <!-- Toppmeny -->
-  <header>
-    <div class="logo">SØRGULEN INDUSTRISERVICE</div>
-    <nav class="main-nav">
-      <a href="index.html">Hjem</a>
-      <a href="om-oss.html">Om oss</a>
-      <a href="#tjenester">Tjenester</a>
-      <a href="kontakt.html">Kontakt</a>
-      <a href="sporsmal.html">Spørsmål</a>
-      <a href="/admin/login.html" class="logginn-knapp">Logg inn</a>
-    </nav>
-  </header>
+ <header>
+  <div class="logo">SØRGULEN INDUSTRISERVICE</div>
+
+  <!-- Vanlig meny for store skjermer -->
+  <nav class="main-nav">
+    <a href="index.html">Hjem</a>
+    <a href="om-oss.html">Om oss</a>
+    <a href="tjenester.html">Tjenester</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="sporsmal.html">Spørsmål</a>
+    <a href="login.html">Logg inn</a>
+  </nav>
+
+  <!-- Hamburger-ikon -->
+  <div class="hamburger" onclick="toggleMobileMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <!-- Mobilmeny -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Hjem</a>
+    <a href="om-oss.html">Om oss</a>
+    <a href="tjenester.html">Tjenester</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="sporsmal.html">Spørsmål</a>
+    <a href="login.html">Logg inn</a>
+  </div>
+</header>
+
 
   <!-- Første seksjon med bakgrunn -->
   <section class="hero-section">
@@ -88,6 +107,11 @@
   </section>
 
   <script src="chat/chat-widget.js"></script>
+<script>
+  function toggleMobileMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("active");
+  }
+</script>
 </body>
 </html>
-
