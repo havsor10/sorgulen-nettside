@@ -296,17 +296,22 @@ header {
 }
 /* Hamburger ikon (skjules på store skjermer) */
 .hamburger {
-  display: none;
+ display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 5px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 1001;
 }
 
 .hamburger div {
   width: 25px;
   height: 3px;
-  background-color: #fff;
+  background-color: #ffffff;
 }
+
 
 /* Mobilmeny (skjules som standard) */
 .mobile-menu {
