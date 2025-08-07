@@ -294,6 +294,58 @@ header {
     padding: 1rem;
   }
 }
+/* Hamburger ikon (skjules på store skjermer) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* Mobilmeny (skjules som standard) */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 2rem;
+  background-color: #1f2833;
+  padding: 1rem;
+  border-radius: 5px;
+  z-index: 1000;
+}
+
+.mobile-menu a {
+  color: #c5c6c7;
+  text-decoration: none;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+.mobile-menu a:hover {
+  color: #66fcf1;
+}
+
+.mobile-menu.active {
+  display: flex;
+}
+
+/* Vis hamburger og skjul vanlig meny på små skjermer */
+@media (max-width: 768px) {
+  .main-nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
 
 
 
